@@ -72,6 +72,7 @@ void Interface::start()
         if (complexity == '0')
         {
             rlutil::cls();
+            destroy_instance();
             return;
         }
         else if (complexity == '3')

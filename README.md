@@ -4,7 +4,7 @@
 A simple sorting visualizer made using SFML and C++.
 
 ## Algorithms
-- O(n^2)
+### O(n^2)
 - [x] Selection Sort
 - [ ] Bubble Sort
 - [ ] Insertion Sort
@@ -18,7 +18,7 @@ A simple sorting visualizer made using SFML and C++.
 - [ ] Pancake Sort
 - [ ] Bitonic Sort
 - [ ] Bogo Sort
-- O(n * log_n)
+### O(n * log_n)
 - [x] Quick Sort (Lomuto partition scheme)
 - [x] Quick Sort (Hoare partition scheme)
 - [ ] Merge Sort
