@@ -2,6 +2,7 @@
 
 #include "Algorithms/Sort.hpp"
 #include <memory>
+#include <rlutil.h>
 
 class Visualizer
 {
@@ -13,8 +14,13 @@ class Visualizer
     void perform_sorting();
 
 public:
-    explicit Visualizer(std::shared_ptr<Sort>);
+    Visualizer();
     ~Visualizer() = default;
 
+    void set_window_name(const std::string&);
+    void set_array_size(int);
+    void set_algorithm(std::shared_ptr<Sort>);
+
+    void run_dummy_instance();
     void run();
 };

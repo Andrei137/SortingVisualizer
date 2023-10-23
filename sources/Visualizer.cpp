@@ -3,7 +3,33 @@
 #include <numeric>
 #include <random>
 
-Visualizer::Visualizer(std::shared_ptr<Sort> a_algorithm) : m_window(sf::VideoMode(1200, 800), "Sorting Visualization"), m_arr(std::vector<int>(150)), m_algorithm(a_algorithm) {}
+Visualizer::Visualizer() : m_arr(std::vector<int>(100)) {}
+
+// The first window has 22 frames for some reason
+// Dummy instance is used to fix this problem
+void Visualizer::run_dummy_instance() 
+{
+    m_window.create(sf::VideoMode(1, 1), "");
+    m_window.setPosition(sf::Vector2i(-10000, -10000));
+    m_window.setVisible(false);
+    m_window.close();
+    m_window.setVisible(true);
+}
+
+void Visualizer::set_window_name(const std::string& a_name)
+{
+    m_window.create(sf::VideoMode(1200, 800), a_name);
+}
+
+void Visualizer::set_array_size(int a_size)
+{
+    m_arr.resize(a_size);
+}
+
+void Visualizer::set_algorithm(std::shared_ptr<Sort> a_algorithm)
+{
+    m_algorithm = a_algorithm;
+}
 
 void Visualizer::draw(int a_active1, int a_active2, int a_pivot)
 {
@@ -22,6 +48,8 @@ void Visualizer::perform_sorting()
 
 void Visualizer::run()
 {
+    m_window.setVerticalSyncEnabled(false);
+    m_window.setFramerateLimit(144);
     std::iota(m_arr.begin(), m_arr.end(), 1);
     perform_sorting();
     while (m_window.isOpen())
