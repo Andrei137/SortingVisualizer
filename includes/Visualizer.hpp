@@ -5,7 +5,6 @@
 
 class Visualizer
 {
-private:
     sf::RenderWindow m_window{};
     std::vector<int> m_arr{};
     std::shared_ptr<SortingAlgorithm> m_algorithm{};
@@ -14,7 +13,7 @@ private:
     void perform_sorting();
 
 public:
-    Visualizer();
+    explicit Visualizer(std::shared_ptr<SortingAlgorithm>);
     ~Visualizer() = default;
 
     void set_algorithm(std::shared_ptr<SortingAlgorithm>);

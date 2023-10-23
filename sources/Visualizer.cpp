@@ -5,7 +5,7 @@
 #include <numeric>
 #include <random>
 
-Visualizer::Visualizer() : m_window(sf::VideoMode(1200, 800), "Sorting Visualization"), m_arr(std::vector<int>(150)) {}
+Visualizer::Visualizer(std::shared_ptr<SortingAlgorithm> a_algorithm) : m_window(sf::VideoMode(1200, 800), "Sorting Visualization"), m_arr(std::vector<int>(150)), m_algorithm(a_algorithm) {}
 
 void Visualizer::draw(int a_active1, int a_active2, int a_pivot)
 {

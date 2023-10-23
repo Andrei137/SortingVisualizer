@@ -110,7 +110,7 @@ endif()
 ###############################################################################
 
 # NOTE: update executable name in .github/workflows/cmake.yml:25 when changing name here
-add_executable(${PROJECT_NAME} Main.cpp sources/Visualizer.cpp sources/QuickSort.cpp)
+add_executable(${PROJECT_NAME} Main.cpp sources/Interface.cpp sources/QuickSort.cpp sources/QuickSortHoare.cpp sources/QuickSortLomuto.cpp sources/Visualizer.cpp)
 
 ###############################################################################
 
@@ -145,7 +145,10 @@ set_custom_stdlib_and_sanitizers(${PROJECT_NAME} true)
 ###############################################################################
 
 # use SYSTEM so clang-tidy does not report warnings from these directories
-# target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ext/<SomeHppLib>/include)
+target_include_directories(
+    ${PROJECT_NAME} SYSTEM PRIVATE
+    ext/include/rlutil
+)
 target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ${SFML_SOURCE_DIR}/include)
 target_link_directories(${PROJECT_NAME} PRIVATE ${SFML_BINARY_DIR}/lib)
 target_link_libraries(${PROJECT_NAME} PRIVATE sfml-graphics sfml-window sfml-system Threads::Threads)

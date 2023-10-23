@@ -1,11 +1,8 @@
-#include "includes/Visualizer.hpp"
-#include "includes/QuickSort.hpp"
-#include <iostream>
+#include "includes/Interface.hpp"
+#include "includes/QuickSortHoare.hpp"
 
 int main()
 {
-    Visualizer v{};
-    v.set_algorithm(std::make_shared<QuickSort>());
-    v.run();
+    Interface::get_instance().start();
     return 0;
 }
