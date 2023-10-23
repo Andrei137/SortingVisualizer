@@ -5,10 +5,12 @@
 #include <thread>
 #include <vector>
 
-class SortingAlgorithm
+class Sort
 {
 public:
+    Sort() = default;
+    virtual ~Sort() = default;
+
     virtual void sort(sf::RenderWindow&, std::vector<int>&) = 0;
     virtual void draw(sf::RenderWindow&, std::vector<int>&, int, int, int) = 0;
-    virtual ~SortingAlgorithm() = default;
 };

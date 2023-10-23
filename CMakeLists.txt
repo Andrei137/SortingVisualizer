@@ -110,7 +110,7 @@ endif()
 ###############################################################################
 
 # NOTE: update executable name in .github/workflows/cmake.yml:25 when changing name here
-add_executable(${PROJECT_NAME} Main.cpp sources/Interface.cpp sources/QuickSort.cpp sources/QuickSortHoare.cpp sources/QuickSortLomuto.cpp sources/Visualizer.cpp)
+add_executable(${PROJECT_NAME} Main.cpp sources/Interface.cpp sources/Algorithms/QuickSort.cpp sources/Algorithms/QuickSortHoare.cpp sources/Algorithms/QuickSortLomuto.cpp sources/Visualizer.cpp)
 
 ###############################################################################
 

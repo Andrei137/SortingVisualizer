@@ -1,6 +1,8 @@
+#pragma once
+
 #include "QuickSort.hpp"
 
-class QuickSortLomuto : public QuickSort
+class QuickSortHoare : public QuickSort
 {
     int partition(sf::RenderWindow&, std::vector<int>&, int, int) override;
     int partition_random(sf::RenderWindow&, std::vector<int>&, int, int) override;

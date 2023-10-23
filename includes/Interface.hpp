@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Visualizer.hpp"
 
 class Interface

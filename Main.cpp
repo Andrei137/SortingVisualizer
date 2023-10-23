@@ -1,5 +1,4 @@
 #include "includes/Interface.hpp"
-#include "includes/QuickSortHoare.hpp"
 
 int main()
 {

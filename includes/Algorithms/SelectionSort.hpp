@@ -1,6 +1,6 @@
 #pragma once
 
-#include "SortingAlgorithm.hpp"
+#include "Sort.hpp"
 #include <cstdlib>
 
 class QuickSort : public SortingAlgorithm

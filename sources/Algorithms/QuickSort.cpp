@@ -1,4 +1,4 @@
-#include "../includes/QuickSort.hpp"
+#include "../../includes/Algorithms/QuickSort.hpp"
 
 void QuickSort::draw(sf::RenderWindow& a_window, std::vector<int>& a_arr, int a_active1, int a_active2, int a_pivot)
 {

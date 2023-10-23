@@ -1,6 +1,6 @@
 #include "../includes/Interface.hpp"
-#include "../includes/QuickSortLomuto.hpp"
-#include "../includes/QuickSortHoare.hpp"
+#include "../includes/Algorithms/QuickSortLomuto.hpp"
+#include "../includes/Algorithms/QuickSortHoare.hpp"
 #include <iostream>
 #include <rlutil.h>
 

@@ -1,4 +1,4 @@
-#include "../includes/QuickSortHoare.hpp"
+#include "../../includes/Algorithms/QuickSortHoare.hpp"
 
 int QuickSortHoare::partition(sf::RenderWindow& a_window, std::vector<int>& a_arr, int a_low, int a_high)
 {
@@ -11,13 +11,13 @@ int QuickSortHoare::partition(sf::RenderWindow& a_window, std::vector<int>& a_ar
         {
             ++i;
             draw(a_window, a_arr, i, j, a_low);
-            std::this_thread::sleep_for(std::chrono::milliseconds(20));
+            std::this_thread::sleep_for(std::chrono::milliseconds(5));
         } while (a_arr[i] < pivot);
         do
         {
             --j;
             draw(a_window, a_arr, i, j, a_low);
-            std::this_thread::sleep_for(std::chrono::milliseconds(20));
+            std::this_thread::sleep_for(std::chrono::milliseconds(5));
         } while (a_arr[j] > pivot);
         if (i >= j)
         {
@@ -40,7 +40,7 @@ void QuickSortHoare::quicksort(sf::RenderWindow& a_window, std::vector<int>& a_a
     {
         int pivot{ partition_random(a_window, a_arr, a_low, a_high) };
         draw(a_window, a_arr, a_low, a_high, pivot);
-        std::this_thread::sleep_for(std::chrono::milliseconds(20));
+        std::this_thread::sleep_for(std::chrono::milliseconds(5));
         quicksort(a_window, a_arr, a_low, pivot);
         quicksort(a_window, a_arr, pivot + 1, a_high);
     }
