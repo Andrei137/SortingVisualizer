@@ -45,7 +45,7 @@ void Visualizer::run()
             }
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::R)
             {
-                std::random_shuffle(m_arr.begin(), m_arr.end());
+                std::shuffle(m_arr.begin(), m_arr.end(), g);
                 draw(-1, -1, -1);
                 std::this_thread::sleep_for(std::chrono::milliseconds(1000));
                 perform_sorting();
