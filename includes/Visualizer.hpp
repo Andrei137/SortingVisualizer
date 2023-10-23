@@ -16,6 +16,5 @@ public:
     explicit Visualizer(std::shared_ptr<Sort>);
     ~Visualizer() = default;
 
-    void set_algorithm(std::shared_ptr<Sort>);
     void run();
 };
