@@ -1,8 +1,9 @@
 #include "../includes/Visualizer.hpp"
 #include "../includes/QuickSort.hpp"
 #include <algorithm>
-#include <numeric>
 #include <iostream>
+#include <numeric>
+#include <random>
 
 Visualizer::Visualizer() : m_window(sf::VideoMode(1200, 800), "Sorting Visualization"), m_arr(std::vector<int>(150)) {}
 
