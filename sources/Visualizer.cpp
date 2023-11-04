@@ -66,7 +66,7 @@ void Visualizer::perform_sorting(char a_option)
         std::random_device rd{};
         std::mt19937 g(rd());
         std::sort(m_arr.begin(), m_arr.end());
-        std::uniform_int_distribution<> dis(size / 2, size - 1);
+        std::uniform_int_distribution<> dis(3 * size / 4, size - 1);
         std::shuffle(m_arr.begin() + dis(g), m_arr.end(), g);
     }
     sf::Font font;
