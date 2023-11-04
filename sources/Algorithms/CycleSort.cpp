@@ -46,12 +46,9 @@ void CycleSort::sort(sf::RenderWindow& a_window, std::vector<int>& a_arr)
             {
                 ++pos;
             }
-            if (item != a_arr[pos])
-            {
-                draw(a_window, a_arr, -1, -1, pos);
-                std::swap(item, a_arr[pos]);
-                ++writes;
-            }
+            draw(a_window, a_arr, -1, -1, pos);
+            std::swap(item, a_arr[pos]);
+            ++writes;
         }
     }
 }

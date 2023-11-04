@@ -32,6 +32,12 @@ A simple sorting visualizer made using SFML and C++.
 - [x] Radix Sort - O(d * (n + b))
 - [x] Stooge Sort - O(n^2.7)
 ### To Implement
+- [x] Options for initial arry configuration
+    - Random shuffle
+    - Increasing order
+    - Decreasing order
+    - Partially sorted
+    - Nearly sorted
 
 ## Credits
 - [SFML](https://www.sfml-dev.org/)
