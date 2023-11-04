@@ -323,7 +323,7 @@ jobs:
             ${GITHUB_WORKSPACE}/${{ env.ZIP_NAME }}
             
       - name: Copy font file
-      run: |
+        run: |
           cp arial.ttf ${{ env.ZIP_NAME }}
 
       - name: Upload Artifacts
