@@ -118,10 +118,10 @@ void Interface::start()
             (
                 "< Select initial order >\n\n"
                 "[1] Random Shuffle\n"
-                "[2] Incresing Order\n"
-                "[3] Decreasing Order\n"
-                "[4] Partially Sorted\n"
-                "[5] Nearly Sorted\n"
+                "[2] Partially Sorted\n"
+                "[3] Nearly Sorted\n"
+                "[4] Decreasing Order\n"
+                "[5] Incresing Order\n"
                 "[0] Go Back\n",
                 "012345"
             );

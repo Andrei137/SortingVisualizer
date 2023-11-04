@@ -46,28 +46,28 @@ void Visualizer::perform_sorting(char a_option)
     else if (a_option == '2')
     {
         std::iota(m_arr.begin(), m_arr.end(), 1);
-    }
-    else if (a_option == '3')
-    {
-        std::iota(m_arr.rbegin(), m_arr.rend(), 1);
-    }
-    else if (a_option == '4')
-    {
-        std::iota(m_arr.begin(), m_arr.end(), 1);
         std::random_device rd{};
         std::mt19937 g(rd());
         std::shuffle(m_arr.begin(), m_arr.end(), g);
         std::uniform_int_distribution<> dis(size / 4, size / 2);
         std::partial_sort(m_arr.begin(), m_arr.begin() + dis(g), m_arr.end());
     }
-    else if (a_option == '5')
+    else if (a_option == '3')
     {
         std::iota(m_arr.begin(), m_arr.end(), 1);
         std::random_device rd{};
         std::mt19937 g(rd());
         std::sort(m_arr.begin(), m_arr.end());
-        std::uniform_int_distribution<> dis(3 * size / 4, size - 1);
+        std::uniform_int_distribution<> dis(size / 2, 3 * size / 4);
         std::shuffle(m_arr.begin() + dis(g), m_arr.end(), g);
+    }
+    else if (a_option == '4')
+    {
+        std::iota(m_arr.rbegin(), m_arr.rend(), 1);
+    }
+    else if (a_option == '5')
+    {
+        std::iota(m_arr.begin(), m_arr.end(), 1);
     }
     sf::Font font;
     if (!font.loadFromFile("arial.ttf")) 

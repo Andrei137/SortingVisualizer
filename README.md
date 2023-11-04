@@ -38,10 +38,11 @@ A simple sorting visualizer made using C++ and SFML. The project includes 24 alg
 - [x] Custom size given by user
 ### Array Initial Order
 - [x] Random Shuffle (default)
-- [x] Increasing Order
-- [x] Decreasing Order
 - [x] Partially Sorted
 - [x] Nearly Sorted
+- [x] Decreasing Order
+- [x] Increasing Order
+
 
 ## Credits
 - [SFML](https://www.sfml-dev.org/)
