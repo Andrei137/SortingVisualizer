@@ -2,9 +2,9 @@
 
 #include "Sort.hpp"
 
-class SelectionSort : public Sort
+class CocktailSort : public Sort
 {
 public:
-    SelectionSort();
+    CocktailSort();
     void sort(sf::RenderWindow&, std::vector<int>&) override;
 };

@@ -2,9 +2,10 @@
 
 #include "Sort.hpp"
 
-class SelectionSort : public Sort
+class CombSort : public Sort
 {
+    int get_next_gap(int);
 public:
-    SelectionSort();
+    CombSort();
     void sort(sf::RenderWindow&, std::vector<int>&) override;
 };

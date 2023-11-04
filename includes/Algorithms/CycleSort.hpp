@@ -2,9 +2,9 @@
 
 #include "Sort.hpp"
 
-class SelectionSort : public Sort
+class CycleSort : public Sort
 {
 public:
-    SelectionSort();
+    CycleSort();
     void sort(sf::RenderWindow&, std::vector<int>&) override;
 };

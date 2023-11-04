@@ -4,7 +4,7 @@ SelectionSort::SelectionSort() : Sort() {};
 
 void SelectionSort::sort(sf::RenderWindow& a_window, std::vector<int>& a_arr)
 {
-    int size{ (int)a_arr.size() };
+    const int size{ (int)a_arr.size() };
     for (int i = 0; i < size - 1; ++i)
     {
         int min_index{ i };

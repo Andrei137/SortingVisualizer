@@ -5,32 +5,33 @@ A simple sorting visualizer made using SFML and C++.
 
 ## Algorithms
 ### O(n^2)
+- [x] Bubble Sort
+- [x] Cocktail Sort
+- [x] Cycle Sort
+- [x] Gnome Sort
+- [x] Insertion Sort
+- [x] Odd-Even Sort
+- [x] Pancake Sort
 - [x] Selection Sort
-- [ ] Bubble Sort
-- [ ] Insertion Sort
-- [ ] Shell Sort
-- [ ] Comb Sort
-- [ ] Cocktail Sort
-- [ ] Odd-Even Sort
-- [ ] Cycle Sort
-- [ ] Stooge Sort
-- [ ] Gnome Sort
-- [ ] Pancake Sort
-- [ ] Bitonic Sort
-- [ ] Bogo Sort
+- [x] Selection Sort (Exchange Variation)
 ### O(n * log_n)
+- [x] Heap Sort
+- [x] Intro Sort
+- [x] Merge Sort
 - [x] Quick Sort (Lomuto partition scheme)
 - [x] Quick Sort (Hoare partition scheme)
-- [ ] Merge Sort
-- [ ] Heap Sort
-- [ ] Smooth Sort
-- [ ] Tree Sort
-- [ ] Intro Sort
-- [ ] Patience Sort
-- [ ] Cube Sort
-- [ ] Library Sort
-- [ ] Tournament Sort
-- [ ] Tim Sort
+- [x] Shell Sort
+- [x] Smooth Sort
+- [x] Tim Sort
+- [x] Tree Sort
+### Other complexities
+- [x] Bogo Sort - O((n + 1)!)
+- [x] Comb Sort - O(n^2 / 2^p)
+- [x] Cycle Sort on [1..n] array - O(n)
+- [x] Pigeonhole Sort - O(n + Range)
+- [x] Radix Sort - O(d * (n + b))
+- [x] Stooge Sort - O(n^2.7)
+### To Implement
 
 ## Credits
 - [SFML](https://www.sfml-dev.org/)

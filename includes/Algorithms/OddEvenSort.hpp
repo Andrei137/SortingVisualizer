@@ -2,9 +2,9 @@
 
 #include "Sort.hpp"
 
-class SelectionSort : public Sort
+class OddEvenSort : public Sort
 {
 public:
-    SelectionSort();
+    OddEvenSort();
     void sort(sf::RenderWindow&, std::vector<int>&) override;
 };

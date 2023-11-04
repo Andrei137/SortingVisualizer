@@ -110,7 +110,7 @@ endif()
 ###############################################################################
 
 # NOTE: update executable name in .github/workflows/cmake.yml:25 when changing name here
-add_executable(${PROJECT_NAME} Main.cpp sources/Algorithms/QuickSort.cpp sources/Algorithms/QuickSortHoare.cpp sources/Algorithms/QuickSortLomuto.cpp sources/Algorithms/SelectionSort.cpp sources/Algorithms/Sort.cpp sources/Interface.cpp sources/Visualizer.cpp)
+add_executable(${PROJECT_NAME} Main.cpp sources/Algorithms/BogoSort.cpp sources/Algorithms/BubbleSort.cpp sources/Algorithms/CocktailSort.cpp sources/Algorithms/CombSort.cpp sources/Algorithms/CycleSort.cpp sources/Algorithms/FancyCycleSort.cpp sources/Algorithms/GnomeSort.cpp sources/Algorithms/HeapSort.cpp sources/Algorithms/InsertionSort.cpp sources/Algorithms/IntroSort.cpp sources/Algorithms/MergeSort.cpp sources/Algorithms/OddEvenSort.cpp sources/Algorithms/PancakeSort.cpp sources/Algorithms/PigeonholeSort.cpp sources/Algorithms/QuickSort.cpp sources/Algorithms/QuickSortHoare.cpp sources/Algorithms/QuickSortLomuto.cpp sources/Algorithms/RadixSort.cpp sources/Algorithms/SelectionSort.cpp sources/Algorithms/SelectionSortExchange.cpp sources/Algorithms/ShellSort.cpp sources/Algorithms/SmoothSort.cpp sources/Algorithms/Sort.cpp sources/Algorithms/StoogeSort.cpp sources/Algorithms/TimSort.cpp sources/Algorithms/TreeSort.cpp sources/Interface.cpp sources/Visualizer.cpp)
 
 ###############################################################################
 
