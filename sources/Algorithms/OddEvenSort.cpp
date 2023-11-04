@@ -13,18 +13,18 @@ void OddEvenSort::sort(sf::RenderWindow& a_window, std::vector<int>& a_arr)
         {
             if (a_arr[i] > a_arr[i + 1])
             {
+                draw(a_window, a_arr, -1, -1, i);
                 is_sorted = false;
                 std::swap(a_arr[i], a_arr[i + 1]);
-                draw(a_window, a_arr, i, i + 1, -1);
             }
         }
         for (int i = 0; i <= size - 2; i += 2)
         {
             if (a_arr[i] > a_arr[i + 1])
             {
+                draw(a_window, a_arr, -1, -1, i);
                 is_sorted = false;
                 std::swap(a_arr[i], a_arr[i + 1]);
-                draw(a_window, a_arr, i, i + 1, -1);
             }
         }
     }

@@ -10,9 +10,9 @@ void TimSort::insertion_sort(sf::RenderWindow& a_window, std::vector<int>& a_arr
         int j{ i - 1 };
         while (j >= a_left && a_arr[j] > key)
         {
+            draw(a_window, a_arr, i, j + 1, -1);
             a_arr[j + 1] = a_arr[j];
             --j;
-            draw(a_window, a_arr, i, j + 1, -1);
         }
         a_arr[j + 1] = key;
     }

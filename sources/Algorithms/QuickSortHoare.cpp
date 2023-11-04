@@ -9,18 +9,19 @@ int QuickSortHoare::partition(sf::RenderWindow& a_window, std::vector<int>& a_ar
     {
         do
         {
-            ++i;
             draw(a_window, a_arr, i, j, a_low);
+            ++i;
         } while (a_arr[i] < pivot);
         do
         {
-            --j;
             draw(a_window, a_arr, i, j, a_low);
+            --j;
         } while (a_arr[j] > pivot);
         if (i >= j)
         {
             return j;
         }
+        draw(a_window, a_arr, i, j, a_low);
         std::swap(a_arr[i], a_arr[j]);
     }
 }

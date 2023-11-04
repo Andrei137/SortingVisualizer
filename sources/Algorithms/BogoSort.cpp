@@ -1,4 +1,6 @@
 #include "../../includes/Algorithms/BogoSort.hpp"
+#include <chrono>
+#include <thread>
 
 BogoSort::BogoSort() : Sort() {};
 

@@ -1,8 +1,6 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
-#include <chrono>
-#include <thread>
 #include <vector>
 
 class Sort

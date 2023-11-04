@@ -9,9 +9,8 @@ class Visualizer
     sf::RenderWindow m_window{};
     std::vector<int> m_arr{};
     std::shared_ptr<Sort> m_algorithm{};
-    
-    void draw(int, int, int);
-    void perform_sorting();
+
+    void perform_sorting(char);
 
 public:
     Visualizer();
@@ -22,5 +21,5 @@ public:
     void set_algorithm(std::shared_ptr<Sort>);
 
     void run_dummy_instance();
-    void run();
+    void run(char);
 };

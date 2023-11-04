@@ -12,9 +12,9 @@ void BubbleSort::sort(sf::RenderWindow& a_window, std::vector<int>& a_arr)
         {
             if (a_arr[j] > a_arr[j + 1])
             {
+                draw(a_window, a_arr, i, j, -1);
                 std::swap(a_arr[j], a_arr[j + 1]);
                 swapped = true;
-                draw(a_window, a_arr, i, j, -1);
             }
         }
         if (swapped == false)

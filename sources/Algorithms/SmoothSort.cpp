@@ -2,32 +2,54 @@
 
 SmoothSort::SmoothSort() : Sort() {};
 
-int SmoothSort::leonardo(int a_k)
+int SmoothSort::leonardo(int a_k) 
 {
-    if (a_k < 2)
+    if (a_k < 2) 
     {
         return 1;
     }
-    return leonardo(a_k - 1) + leonardo(a_k - 2) + 1;
+    std::vector<int> dp(a_k + 1);
+    dp[0] = dp[1] = 1;
+    for (int i = 2; i <= a_k; ++i) 
+    {
+        dp[i] = dp[i - 1] + dp[i - 2] + 1;
+    }
+    return dp[a_k];
 }
 
-void SmoothSort::heapify(std::vector<int>& a_arr, int a_size, int a_root)
+void SmoothSort::heapify(sf::RenderWindow& a_window, std::vector<int>& a_arr, int a_start, int a_end)
 {
-    int largest{ a_root };
-    int left{ 2 * a_root + 1 };
-    int right{ 2 * a_root + 2 };
-    if (left < a_size && a_arr[left] > a_arr[largest])
+    int i{ a_start };
+    int j{ 0 }, k{ 0 };
+    while (k < a_end - a_start + 1)
     {
-        largest = left;
+        if (k & 0xAAAAAAAA)
+        {
+            j += i;
+            i >>= 1;
+        }
+        else
+        {
+            i += j;
+            j >>= 1;
+        }
+        ++k;
     }
-    if (right < a_size && a_arr[right] > a_arr[largest])
+    while (i > 0)
     {
-        largest = right;
-    }
-    if (largest != a_root)
-    {
-        std::swap(a_arr[a_root], a_arr[largest]);
-        heapify(a_arr, a_size, largest);
+        j >>= 1;
+        k = i + j;
+        while (k < a_end)
+        {
+            if (a_arr[k] > a_arr[k - i])
+            {
+                break;
+            }
+            draw(a_window, a_arr, k, k - i, -1);
+            std::swap(a_arr[k], a_arr[k - i]);
+            k += i;
+        }
+        i = j;
     }
 }
 
@@ -37,11 +59,12 @@ void SmoothSort::sort(sf::RenderWindow& a_window, std::vector<int>& a_arr)
     int p{ size - 1 };
     int q{ p };
     int r{ 0 };
+    draw(a_window, a_arr, -1, -1, p);
     while (p > 0)
     {
         if ((r & 0x03) == 0)
         {
-            heapify(a_arr, r, q);
+            heapify(a_window, a_arr, r, q);
         }
         if (leonardo(r) == p)
         {
@@ -51,7 +74,7 @@ void SmoothSort::sort(sf::RenderWindow& a_window, std::vector<int>& a_arr)
         {
             --r;
             q -= leonardo(r);
-            heapify(a_arr, r, q);
+            heapify(a_window, a_arr, r, q);
             q = r - 1;
             ++r;
         }

@@ -2,10 +2,6 @@
 
 void Sort::draw(sf::RenderWindow& a_window, std::vector<int>& a_arr, int a_active1, int a_active2, int a_pivot)
 {
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-    {
-        a_window.close();
-    }
     a_window.clear(sf::Color::Black);
     float width{ (float)a_window.getSize().x / a_arr.size() };
     float height_ratio{ (float)a_window.getSize().y / (int)a_arr.size() };
@@ -26,6 +22,10 @@ void Sort::draw(sf::RenderWindow& a_window, std::vector<int>& a_arr, int a_activ
             bar.setFillColor((i == a_active1 || i == a_active2) ? sf::Color::Red : sf::Color::White);
         }
         a_window.draw(bar);
+    }
+    if (a_active1 == a_active2 && a_active1 == a_pivot && a_active1 == -1)
+    {
+        return;
     }
     a_window.display();
 }

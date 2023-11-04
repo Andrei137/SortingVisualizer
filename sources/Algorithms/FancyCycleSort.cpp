@@ -11,8 +11,8 @@ void FancyCycleSort::sort(sf::RenderWindow& a_window, std::vector<int>& a_arr)
         int correct{ a_arr[i] - 1 };
         if (a_arr[i] != a_arr[correct])
         {
-            std::swap(a_arr[i], a_arr[correct]);
             draw(a_window, a_arr, i, correct, -1);
+            std::swap(a_arr[i], a_arr[correct]);
         }
         else
         {

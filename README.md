@@ -1,7 +1,7 @@
 # Sorting Visualizer
 
 ## About
-A simple sorting visualizer made using SFML and C++.
+A simple sorting visualizer made using C++ and SFML. The project includes 24 algorithms, grouped by complexity. The user can choose the size of the array, the initial order of the array and the algorithm to be used. The project also includes a timer, which appears afer the algorithm finishes. Keep in mind that the timer shows how long it took to display the process, not how long it took to sort the array.
 
 ## Algorithms
 ### O(n^2)
@@ -31,13 +31,17 @@ A simple sorting visualizer made using SFML and C++.
 - [x] Pigeonhole Sort - O(n + Range)
 - [x] Radix Sort - O(d * (n + b))
 - [x] Stooge Sort - O(n^2.7)
-### To Implement
-- [x] Options for initial arry configuration
-    - Random shuffle
-    - Increasing order
-    - Decreasing order
-    - Partially sorted
-    - Nearly sorted
+
+## Options
+### Array Size
+- [x] Default size for every algorithm
+- [x] Custom size given by user
+### Array Initial Order
+- [x] Random Shuffle (default)
+- [x] Increasing Order
+- [x] Decreasing Order
+- [x] Partially Sorted
+- [x] Nearly Sorted
 
 ## Credits
 - [SFML](https://www.sfml-dev.org/)

@@ -8,19 +8,20 @@ int QuickSortLomuto::partition(sf::RenderWindow& a_window, std::vector<int>& a_a
     {
         if (a_arr[j] < pivot)
         {
+            draw(a_window, a_arr, i, j, a_high);
             ++i;
             std::swap(a_arr[i], a_arr[j]);
-            draw(a_window, a_arr, i, j, a_high);
         }
     }
-    std::swap(a_arr[i + 1], a_arr[a_high]);
     draw(a_window, a_arr, i + 1, a_high, a_high);
+    std::swap(a_arr[i + 1], a_arr[a_high]);
     return i + 1;
 }
 
 int QuickSortLomuto::partition_random(sf::RenderWindow& a_window, std::vector<int>& a_arr, int a_low, int a_high)
 {
     int random{ a_low + rand() % (a_high - a_low) };
+    draw(a_window, a_arr, a_low, a_high, random);
     std::swap(a_arr[random], a_arr[a_high]);
     return partition(a_window, a_arr, a_low, a_high);
 }

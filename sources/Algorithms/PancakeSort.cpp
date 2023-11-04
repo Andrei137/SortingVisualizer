@@ -7,8 +7,8 @@ void PancakeSort::flip(sf::RenderWindow& a_window, std::vector<int>& a_arr, int 
     int start{ 0 };
     while (start < a_i)
     {
-        std::swap(a_arr[start], a_arr[a_i]);
         draw(a_window, a_arr, a_i, start, -1);
+        std::swap(a_arr[start], a_arr[a_i]);
         ++start;
         --a_i;
     }

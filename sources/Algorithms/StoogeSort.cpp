@@ -10,8 +10,8 @@ void StoogeSort::stooge_sort(sf::RenderWindow& a_window, std::vector<int>& a_arr
     }
     if (a_arr[a_low] > a_arr[a_high])
     {
-        std::swap(a_arr[a_low], a_arr[a_high]);
         draw(a_window, a_arr, a_low, a_high, -1);
+        std::swap(a_arr[a_low], a_arr[a_high]);
     }
     if (a_high - a_low + 1 > 2)
     {

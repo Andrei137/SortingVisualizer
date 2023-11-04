@@ -74,6 +74,7 @@ void Interface::start()
     Visualizer v{};
     v.run_dummy_instance();
     bool changed_size{ false };
+    char array_order{ '1' };
     while (complexity != '0')
     {
         rlutil::cls();
@@ -82,12 +83,13 @@ void Interface::start()
             complexity = make_decision
             (
                 "< Select complexity >\n\n"
-                "[1] O(n^2) (Default Array Size = 100]\n"
+                "[1] O(n^2) (Default Array Size = 100)\n"
                 "[2] O(n * log_n) (Default Array Size = 300)\n"
                 "[3] Other complexities\n"
                 "[4] Change array size\n"
+                "[5] Change array initial order (Default = Random Shuffle)\n"
                 "[0] Exit\n",
-                "01234"
+                "012345"
             );
         }
         if (complexity == '0')
@@ -106,6 +108,26 @@ void Interface::start()
             {
                 v.set_array_size(size);
                 changed_size = true;
+            }
+            complexity = '-';
+        }
+        else if (complexity == '5')
+        {
+            rlutil::cls();
+            array_order = make_decision
+            (
+                "< Select initial order >\n\n"
+                "[1] Random Shuffle\n"
+                "[2] Incresing Order\n"
+                "[3] Decreasing Order\n"
+                "[4] Partially Sorted\n"
+                "[5] Nearly Sorted\n"
+                "[0] Go Back\n",
+                "012345"
+            );
+            if (array_order == '0')
+            {
+                array_order = '1';
             }
             complexity = '-';
         }
@@ -337,7 +359,7 @@ void Interface::start()
                 }
                 complexity = '3';
             }
-            v.run();
+            v.run(array_order);
         }
     }
 }

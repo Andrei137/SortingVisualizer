@@ -16,10 +16,7 @@ void ShellSort::sort(sf::RenderWindow& a_window, std::vector<int>& a_arr)
                 a_arr[j] = a_arr[j - gap];
             }
             a_arr[j] = temp;
-            draw(a_window, a_arr, j, i, -1);
-
-
-            
+            draw(a_window, a_arr, j, i, -1); 
         }
     }
 }

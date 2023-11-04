@@ -13,9 +13,9 @@ void IntroSort::insertion_sort(sf::RenderWindow& a_window, std::vector<int>& a_a
         int j{ i - 1 };
         while (j >= left && a_arr[j] > key)
         {
+            draw(a_window, a_arr, i, j, -1);
             a_arr[j + 1] = a_arr[j];
             --j;
-            draw(a_window, a_arr, i, j, -1);
         }
         a_arr[j + 1] = key;
     }
@@ -30,9 +30,9 @@ int* IntroSort::partition(sf::RenderWindow& a_window, std::vector<int>& a_arr, i
     {
         if (a_arr[j] < pivot)
         {
+            draw(a_window, a_arr, i, j, a_high);
             ++i;
             std::swap(a_arr[i], a_arr[j]);
-            draw(a_window, a_arr, i, j, a_high);
         }
     }
     std::swap(a_arr[i + 1], a_arr[a_high]);
