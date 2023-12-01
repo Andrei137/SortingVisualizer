@@ -708,6 +708,10 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
+CPackConfig.cmake
+CPackSourceConfig.cmake
+build/
+
 # Sublime Text
 *.sublime-project
 

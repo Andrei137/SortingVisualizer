@@ -7,8 +7,9 @@ project(SortingVisualizer)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
-
 set(SFML_DIR "C:/Mingw/SFML-2.5.1")
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
 
 option(WARNINGS_AS_ERRORS "Treat warnings as errors" OFF)
 option(BUILD_SHARED_LIBS "Build SFML as shared library" FALSE)

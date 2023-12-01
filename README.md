@@ -3,6 +3,13 @@
 ## About
 A simple sorting visualizer made using C++ and SFML. The project includes 24 algorithms, grouped by complexity. The user can choose the size of the array, the initial order of the array and the algorithm to be used. The project also includes a timer, which appears afer the algorithm finishes. Keep in mind that the timer shows how long it took to display the process, not how long it took to sort the array.
 
+## Usage
+- Windows
+```bash
+run.bat
+SortingVisualizer
+```
+
 ## Algorithms
 ### O(n^2)
 - [x] Bubble Sort
